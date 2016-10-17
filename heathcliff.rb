@@ -74,7 +74,6 @@ def scrapecase(docketnumber)
 		end
 		puts "Wrote case data to a CSV file for #{@fulldocketnumber}"
 			
-		# Save the party information to a csv file
 		@docketarray.each{|subarray|
 		  CSV.open("csv/#{$departmentfilename}_#{$divisionfilename}_#{$year}_party_list.csv","ab") do |csv|
 			csv << [@fulldocketnumber, @county, @date, @type, subarray[4], subarray[5], @status]
